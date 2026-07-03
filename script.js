@@ -1,4 +1,4 @@
-import { db, collection, addDoc, getDocs, query, orderBy } from "./firebase.js"
+import { db, collection, addDoc, getDocs, query, orderBy, auth, signInAnonymously } from "./firebase.js"
 
 function getTime() {
     const now = new Date();
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     })
 
+    signInAnonymously(auth)
     const q = query(collection(db, "posts"), orderBy("createdAt", "desc"));
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {

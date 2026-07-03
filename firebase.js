@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCL0OdorkZ1Y-lAGxh_J5MxRZMgFplZMjo",
@@ -9,9 +10,10 @@ const firebaseConfig = {
     messagingSenderId: "78873597685",
     appId: "1:78873597685:web:ea25cb60c1eac7af7217bc",
     measurementId: "G-RNBHVTQQNR"
-}
+};
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth();
 
-export { db, collection, addDoc, getDocs, query, orderBy }
+export { db, collection, addDoc, getDocs, query, orderBy, auth, signInAnonymously };
