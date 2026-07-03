@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>群組目標公告工具</title>
+</head>
+<body>
+    <h1>群組目標公告工具</h1>
+    <section class="section">
+        <h2>公告目標</h2>
+        <label class="send-label" for="send-input">你的Discord名稱</label>
+        <input name="send-input" type="text" id="send-input" class="send-input">
+        <label class="send-label" for="send-textarea">你的目標內容</label>
+        <textarea name="send-textarea" class="send-textarea" id="send-textarea" rows="5"></textarea>
+        <button id="send-btn" class="send-btn">發布目標</button>
+    </section>
+    <section class="section">
+        <h2>查看目標</h2>
+        <div id="get-grid" class="get-grid"></div>
+    </section>
+    <script src="config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
